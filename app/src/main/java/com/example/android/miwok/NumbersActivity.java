@@ -52,7 +52,7 @@ public class NumbersActivity extends AppCompatActivity {
 //        }
 
         //Listview and view recycling
-        WordAdapter itemAdapter = new WordAdapter(this, words);
+        WordAdapter itemAdapter = new WordAdapter(this, words, R.color.category_numbers);
         ListView listView = (ListView)findViewById(R.id.list);
         listView.setAdapter(itemAdapter);
     }

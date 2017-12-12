@@ -4,29 +4,38 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:paddingTop="16dp"
-              android:paddingLeft="16dp">
+              android:minHeight="@dimen/list_item_height"
+              android:background="@color/tan_background">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         android:id="@+id/listView_image"
-        android:paddingLeft="16dp"
-        android:src="@mipmap/ic_launcher"/>
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout android:orientation="vertical"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent"
-                  android:paddingLeft="16dp">
+                  android:paddingLeft="16dp"
+                  android:gravity="center_vertical"
+                  android:background="@color/category_numbers"
+                  android:id="@+id/text_container">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/miwork_text_view"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
             tools:text="lutti"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/default_text_view"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
             tools:text="one"/>
 
     </LinearLayout>
