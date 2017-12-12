@@ -11,7 +11,9 @@ public class Word {
 	private String mMiwokTranslation;
 
 	//define image resourse
-	private int mImageResourceId;
+	private int mImageResourceId = NO_IMAGE_PROVIDED;
+
+	private static final int NO_IMAGE_PROVIDED = -1;
 
 	//constructor
 	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId) {
@@ -37,6 +39,16 @@ public class Word {
 
 	public int imageResourceId() {
 		return mImageResourceId;
+	}
+
+	/*
+	* return whether or not there is an image for this word
+	*/
+	public boolean hasImage() {
+		if (mImageResourceId == NO_IMAGE_PROVIDED) {
+			return false;
+		}
+		return true;
 	}
 
 }
