@@ -11,10 +11,10 @@ public class Word {
 	private String mMiwokTranslation;
 
 	//define image resourse
-	private String mImageResourceId;
+	private int mImageResourceId;
 
 	//constructor
-	public Word(String DefaultTranslation, String MiwokTranslation, String imageResourceId) {
+	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId) {
 		mDefaultTranslation = DefaultTranslation;
 		mMiwokTranslation = MiwokTranslation;
 		mImageResourceId = imageResourceId;
@@ -35,7 +35,7 @@ public class Word {
 		return mMiwokTranslation;
 	}
 
-	public String imageResourceId() {
+	public int imageResourceId() {
 		return mImageResourceId;
 	}
 
