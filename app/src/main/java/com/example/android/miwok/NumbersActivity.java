@@ -31,14 +31,15 @@ public class NumbersActivity extends AppCompatActivity {
         //create an arrayList of words
         ArrayList<Word> words = new ArrayList<Word>();
         words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
-        words.add(new Word("one", "lutti"));
+        words.add(new Word("two", "otiiko"));
+        words.add(new Word("three", "tolookosu"));
+        words.add(new Word("four", "oyyisa"));
+        words.add(new Word("five", "massokka"));
+        words.add(new Word("six", "temmokka"));
+        words.add(new Word("seven", "kenekaku"));
+        words.add(new Word("eight", "kawinta"));
+        words.add(new Word("night", "wo’e"));
+        words.add(new Word("then", "na’aacha"));
 
 //
 //        LinearLayout numbersRootView = (LinearLayout)findViewById(R.id.numbers_rootView);
