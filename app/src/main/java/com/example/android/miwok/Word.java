@@ -10,6 +10,16 @@ public class Word {
 	//define miwok
 	private String mMiwokTranslation;
 
+	//define image resourse
+	private String mImageResourceId;
+
+	//constructor
+	public Word(String DefaultTranslation, String MiwokTranslation, String imageResourceId) {
+		mDefaultTranslation = DefaultTranslation;
+		mMiwokTranslation = MiwokTranslation;
+		mImageResourceId = imageResourceId;
+	}
+
 	public Word(String DefaultTranslation, String MiwokTranslation) {
 		mDefaultTranslation = DefaultTranslation;
 		mMiwokTranslation = MiwokTranslation;
@@ -23,6 +33,10 @@ public class Word {
 
 	public String getMiwokTranslation() {
 		return mMiwokTranslation;
+	}
+
+	public String imageResourceId() {
+		return mImageResourceId;
 	}
 
 }
