@@ -15,9 +15,8 @@
  */
 package com.example.android.miwok;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -30,17 +29,17 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //create an arrayList of words
-        ArrayList<String> words = new ArrayList<>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("night");
-        words.add("ten");
+        ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+        words.add(new Word("one", "lutti"));
+
 //
 //        LinearLayout numbersRootView = (LinearLayout)findViewById(R.id.numbers_rootView);
 //
@@ -52,7 +51,7 @@ public class NumbersActivity extends AppCompatActivity {
 //        }
 
         //Listview and view recycling
-        ArrayAdapter<String> itemAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
+        WordAdapter itemAdapter = new WordAdapter(this, words);
         ListView listView = (ListView)findViewById(R.id.list);
         listView.setAdapter(itemAdapter);
     }

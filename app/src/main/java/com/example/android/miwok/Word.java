@@ -1,20 +1,18 @@
-import com.example.android.miwok.MainActivity;
-
 /**
  * Created by kaili on 2017-12-11.
  */
-
+package com.example.android.miwok;
 public class Word {
 
 	//define translation
 	private String mDefaultTranslation;
 
 	//define miwok
-	private String mMewokTranslation;
+	private String mMiwokTranslation;
 
-	public Word(String DefaultTranslation, String MewokTranslation) {
+	public Word(String DefaultTranslation, String MiwokTranslation) {
 		mDefaultTranslation = DefaultTranslation;
-		mMewokTranslation = MewokTranslation;
+		mMiwokTranslation = MiwokTranslation;
 	}
 
 
@@ -23,8 +21,8 @@ public class Word {
 		return mDefaultTranslation;
 	}
 
-	public String getMewokTranslation() {
-		return mMewokTranslation
+	public String getMiwokTranslation() {
+		return mMiwokTranslation;
 	}
 
 }
