@@ -93,6 +93,13 @@ public class NumbersActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        // when the activity is stopped, release the media player resource because we wont need them
+        releaseMediaPlayer();
+    }
+
     /**
      * Clean up the media player by releasing its resources.
      */
