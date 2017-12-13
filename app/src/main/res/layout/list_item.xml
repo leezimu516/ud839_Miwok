@@ -10,7 +10,7 @@
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
         android:id="@+id/listView_image"
-        android:src="@mipmap/ic_launcher"
+        tools:src="@mipmap/ic_launcher"
         android:scaleType="centerCrop"/>
 
     <LinearLayout android:orientation="vertical"

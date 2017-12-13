@@ -1,6 +1,7 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,9 @@ public class WordAdapter extends ArrayAdapter<Word> {
 	//define color resource id for this list of word
 	private int mColorResourceId;
 
+	//defint mediaplayer
+	private MediaPlayer mediaPlayer;
+
 	public WordAdapter(Activity context, ArrayList<Word> wordAdater, int colorResourceId) {
 		super(context, 0, wordAdater);
 		mColorResourceId = colorResourceId;
@@ -34,7 +38,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 		}
 
 		// Get the {@link AndroidFlavor} object located at this position in the list
-		Word currentWord = getItem(position);
+		final Word currentWord = getItem(position);
 
 		// Find the TextView in the list_item.xml layout with the ID miwork_text_view
 		TextView miwokTextView = (TextView) listItemView.findViewById(R.id.miwork_text_view);
@@ -54,7 +58,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 		// set this imageResource on the ImageView
 		//Log.d("mytag", currentWord.imageResourceId() + "");
 		if (currentWord.hasImage()) {
-			imageView.setImageResource(currentWord.imageResourceId());
+			imageView.setImageResource(currentWord.getImageResourceId());
 			imageView.setVisibility(View.VISIBLE);
 		} else {
 			imageView.setVisibility(View.GONE);
@@ -66,6 +70,18 @@ public class WordAdapter extends ArrayAdapter<Word> {
 		int color = ContextCompat.getColor(getContext(), mColorResourceId);
 		//set the background color of the text container View
 		textContainer.setBackgroundColor(color);
+
+		//play audio
+		//find translation container
+		View audioContainer = listItemView.findViewById(R.id.text_container);
+		//set onclicklistener
+		audioContainer.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceId());
+				mediaPlayer.start();
+			}
+		});
 
 
 		// Return the whole list item layout (containing 2 TextViews and an ImageView)

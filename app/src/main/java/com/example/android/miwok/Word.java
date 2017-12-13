@@ -2,6 +2,7 @@
  * Created by kaili on 2017-12-11.
  */
 package com.example.android.miwok;
+
 public class Word {
 
 	//define translation
@@ -15,11 +16,21 @@ public class Word {
 
 	private static final int NO_IMAGE_PROVIDED = -1;
 
+	//define audio resource id
+	private int mAudioResourceId;
+
 	//constructor
 	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId) {
 		mDefaultTranslation = DefaultTranslation;
 		mMiwokTranslation = MiwokTranslation;
 		mImageResourceId = imageResourceId;
+	}
+
+	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId, int AudioResourceId) {
+		mDefaultTranslation = DefaultTranslation;
+		mMiwokTranslation = MiwokTranslation;
+		mImageResourceId = imageResourceId;
+		mAudioResourceId = AudioResourceId;
 	}
 
 	public Word(String DefaultTranslation, String MiwokTranslation) {
@@ -37,8 +48,12 @@ public class Word {
 		return mMiwokTranslation;
 	}
 
-	public int imageResourceId() {
+	public int getImageResourceId() {
 		return mImageResourceId;
+	}
+
+	public int getAudioResourceId() {
+		return mAudioResourceId;
 	}
 
 	/*
