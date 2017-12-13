@@ -20,12 +20,6 @@ public class Word {
 	private int mAudioResourceId;
 
 	//constructor
-	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId) {
-		mDefaultTranslation = DefaultTranslation;
-		mMiwokTranslation = MiwokTranslation;
-		mImageResourceId = imageResourceId;
-	}
-
 	public Word(String DefaultTranslation, String MiwokTranslation, int imageResourceId, int AudioResourceId) {
 		mDefaultTranslation = DefaultTranslation;
 		mMiwokTranslation = MiwokTranslation;
@@ -33,9 +27,10 @@ public class Word {
 		mAudioResourceId = AudioResourceId;
 	}
 
-	public Word(String DefaultTranslation, String MiwokTranslation) {
+	public Word(String DefaultTranslation, String MiwokTranslation, int AudioResourceId) {
 		mDefaultTranslation = DefaultTranslation;
 		mMiwokTranslation = MiwokTranslation;
+		mAudioResourceId = AudioResourceId;
 	}
 
 
@@ -56,9 +51,19 @@ public class Word {
 		return mAudioResourceId;
 	}
 
+	@Override
+	public String toString() {
+		return "Word{" +
+				"mAudioResourceId=" + mAudioResourceId +
+				", mDefaultTranslation='" + mDefaultTranslation + '\'' +
+				", mMiwokTranslation='" + mMiwokTranslation + '\'' +
+				", mImageResourceId=" + mImageResourceId +
+				'}';
+	}
+
 	/*
-	* return whether or not there is an image for this word
-	*/
+		* return whether or not there is an image for this word
+		*/
 	public boolean hasImage() {
 		if (mImageResourceId == NO_IMAGE_PROVIDED) {
 			return false;
