@@ -73,15 +73,15 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
 		//play audio
 		//find translation container
-		View audioContainer = listItemView.findViewById(R.id.text_container);
-		//set onclicklistener
-		audioContainer.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceId());
-				mediaPlayer.start();
-			}
-		});
+//		View audioContainer = listItemView.findViewById(R.id.text_container);
+//		//set onclicklistener
+//		audioContainer.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View view) {
+//				mediaPlayer = MediaPlayer.create(getContext(), currentWord.getAudioResourceId());
+//				mediaPlayer.start();
+//			}
+//		});
 
 
 		// Return the whole list item layout (containing 2 TextViews and an ImageView)
